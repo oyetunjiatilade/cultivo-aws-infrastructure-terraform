@@ -112,7 +112,7 @@ jobs:
         run: terraform output -json > outputs.json
       
       - name: Upload Outputs
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: tf-outputs-${{ matrix.environment }}
           path: environments/${{ matrix.environment }}/outputs.json
